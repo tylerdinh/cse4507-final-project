@@ -11,25 +11,55 @@
     <!--The project title, your names, e-mail addresses, and IDs.-->
     <!-- Tyler -->
 
-    Our final project's name for is Fly Sense. It will be created by Tyler Dinh (dinh.t@wustl.edu, 525483) and Tengis Kelley (). 
+    Our final project's name for is Fly Sense. It will be created by Tyler Dinh (dinh.t@wustl.edu, 525483) and Tengis Kelley (k.tengis@wustl.edu, 528529). 
 
     <h2>Background and Motivation</h2>
     <!--Discuss your motivations and reasons for choosing this project, especially any background or research interests that may have influenced your decision.-->
     <!-- Tyler -->
 
-    Fruit flies are pesky. Therefore, we would like to understand how they act so that we ca 
+    The problem is that fruit flies are pesky. We want to understand this peskiness to better leverage this (for traps, medical research, etc).
+
+    <br><br>
+
+    <!-- to discuss:
+    recent release of a male fly dataset from google deepmind, that has spawned a lot of visualizations
+    fruit flies playing games like minecraft or DOOM, flappy bird, there are some that drove cars etc -->
 
     <h2>Project Objectives</h2>
     <!--Provide the primary questions you are trying to answer with your visualization. What would you like to learn and accomplish? List the benefits.-->
     <!-- Tyler -->
 
+    Our primary question that we plan to answer with our visualizations is "How do the neurons for a fruit fly related to one of the five senses activate when given an input produce an output?"
+
+    <br><br>
+
+    Our solution to this primary question is the creation of an interactive visualization to map how different neural pathways in the fly's brain respond to various stimuli and an observation of the output that the fly brain makes. 
+
+    <br><br>
+
+    The benefit of this Researchers can better understand how fly brains work and draw parallels to human brains, ideally. We'll also better understand how to manipulate fly behavior for a desired effect (keeping them out of the house)
+
     <h2>Data</h2>
     <!--From where and how are you collecting your data? If appropriate, provide a link to your data sources.-->
     <!-- Tyler -->
 
+    We will be collecting our data from `https://male-cns.janelia.org/`. We will download three files that are relevant to our processing and visualization. `data/body-annotations-male-cns-v1.0-minconf-0.5.feather`, `data/body-neurotransmitters-male-cns-v1.0.feather`, and `data/connectome-weights-male-cns-v1.0-minconf-0.5.feather`
+
     <h2>Data Processing</h2>
     <!--Do you expect to do substantial data cleanup? What quantities do you plan to derive from your data? How will data processing be implemented?-->
     <!-- Tyler -->
+
+    Yes, we expect to need substantial data cleanup for Fly Sense. Because displaying the entire neural network of the fly brain is infeasible in the browser through JavaScript, we will need to prune the neural network. We will do this speicifically by only targeting the nodes that are relevant to the selected sense for the fruit fly. For example, for the fruit fly's sense of "taste", we would only target input nodes relevant to tasting, hidden layer nodes relevant to tasting, and output layer nodes relevant to tasting in the neural network. 
+
+    <br><br>
+    
+    As such, this will require knowledge of what nodes to prune per each of the five senses we intend to study for a fruit fly. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript.
+
+    <br><br>
+
+    Then, to visualize this neural network, we will use JavaScript for handling our pruned dataset and then rendering & serving it in the browser.
+
+    <br><br>
 
     <h2>Visualization Design</h2>
     <!-- How will you display your data? Provide some general ideas that you have for the visualization design. 
@@ -52,6 +82,8 @@
     <h2>Project Schedule</h2>
     <!--Plan your work so that you can avoid a big rush right before the final project deadline. Delegate different modules and responsibilities among your team members. Write this in terms of weekly deadlines.-->
     <!-- Tyler -->
+
+    We'll be working in a shared GitHub repo with standard git branching workflows. We will communicate proactively and early about any incoming schedule conflicts and work around them
 
 </body>
 </html>

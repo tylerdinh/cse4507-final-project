@@ -1,0 +1,136 @@
+ Question 1
+Project Name: 
+Your Answer:
+
+Fly Sense
+ 
+Question 2
+
+Members: 
+
+ 
+Your Answer:
+
+Tengis Kelley
+Tyler Dinh
+ 
+Question 3
+How and when will you meet? Decide on a regular meeting time. 
+Your Answer:
+
+We'll meet on Fridays in the afternoon, tentatively at either of our schedules
+ 
+Question 4
+How will you communicate? List the rules and technologies you will use.  
+Your Answer:
+
+We'll be communicating via text SMS
+ 
+Question 5
+How you will collaborate on implementation: rules, technology
+Your Answer:
+
+We'll be working in a shared GitHub repo with standard git branching workflows. We will use a mix of python and JS for handling the dataset and then rendering & serving it in the browser.
+ 
+Question 6
+How will you deal with non-performing members?
+Your Answer:
+
+We will address our concerns in our regular meeting times, and if issues persist, we'll bring it up with the instructor(s) to mediate
+ 
+
+ 
+
+model.png
+
+Rank each of the model categories using the following scale:
+
+5 = Most comfortable / I love this!
+
+…
+
+1 = Least comfortable / not my strength
+
+ 
+
+Target: [target]
+
+Data Wrangling: [data-wrangling]
+
+Design: [design]
+
+Implement: [implement]
+
+Evaluate: [evaluate]
+ 
+Question 7
+
+model.png
+
+ 
+
+Discuss the personal rankings within your teams and assign each model task to a team member.
+Your Answer:
+
+Tyler: 
+
+Target: 5
+
+Data Wrangling: 5
+
+Design: 5
+
+Implement: 5
+
+Evaluate: 5
+
+ 
+
+Tengis: 
+
+Target: 5
+
+Data Wrangling: 5
+
+Design: 5
+
+Implement: 5
+
+Evaluate: 5
+ 
+Question 8
+
+expectation_vs_reality.png
+
+Consider the schedule (deadlines and deliverables) on the final project page and create a plan for how you will work together to accomplish your goals. Note differences in schedules and work preferences (night owl, early riser, procrastinators, etc). You should also be transparent about predictable interruptions and travels (e.g., John's birthday weekend, religious holidays, etc. ). 
+
+ 
+
+ 
+Your Answer:
+
+We will communicate proactively and early about any incoming schedule conflicts and work around them
+ 
+Question 9
+
+elevator.png
+
+Imagine you are in an elevator and someone asks you about your project. You have about 30 seconds to pitch your idea. Craft your group's elevator pitch. This is a concise, jargon-free, memorable and repeatable articulation of your group's project. You should include: 
+
+    Problem (what?)
+    Solution (how?)
+    Benefit (what for?)
+
+Exclude:
+
+    Jargons
+    Exceptions and Caveats
+
+ 
+Your Answer:
+
+Problem: Fruit Flies are pesky, and we want to understand how they act so we can leverage this (for traps, medical research, etc)
+
+Solution: We will make an interactive visualization to map how different neural pathways in the fly's brain respond to various stimuli and what output the fly brain makes. 
+
+Benefit: Researchers can better understand how fly brains work and draw parallels to human brains, ideally. We'll also better understand how to manipulate fly behavior for a desired effect (keeping them out of the house)

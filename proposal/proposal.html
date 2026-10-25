@@ -77,15 +77,27 @@
     <!--List the features without which you would consider your project to be a failure.-->
     <!-- Tyler -->
 
+    First, we must have five senses that we analyze in total, as our entire project is about senses of a fly. Specifically, we need visualizations of the male fly's brain for Sight, Hearing, Smell, Taste, and Touch, with at least one task/network per sense. The visualization of each task should be a neural network of the appropriate nodes and edges for the input, hidden, and output layers rendered in the library `three.js`, so that the visualizations can be visualized in 3D. As the user starts a task for a fly, they should see the edges activating between different nodes in real time and in 3D, and then be able to see what the predicted state / feelings of the fly are after the neural network has successfully completed a forward pass with the predictor variables. 
+
     <h2>Optional Features</h2>
     <!--List the features you consider nice to have but not critical.-->
     <!-- Tyler -->
+
+    We'd like to have a diverse set of tasks per each of our five senses that will be analyzed. For example, a taste task could be "eat a banana", which we would then manually encode into groups of input neuron activations and watch as the values propagate to the output layer of neurons. However, since each of these tasks needs to be manually encoded and thought about (ex: which neurons / groups to pick) on the data processing side of the project, it would be nice to have a more representative set of tasks to observe a fruit fly's reactions, but just one task per sense would be enough to satisfy the base requirements we propose. The dream feature would be one that can take any user input and automatically encode it in the correct format to then pass to the given input layer neurons.
+
+    <br><br>
+
+    Another feature that would be nice to have is if the user could drag around the 3D plane where the neural network visualization is. This would let the user explore the neural network for each sense more. In addition, it would be nice to have a feature where the user can hover over nodes in the same plane to recieve a tooltip of what their characteristics are. For example, one neuron could be associated with the left eye, while another neuron could be associated with the right eye. There are many relationships that a user would be able to look at between the nodes in the neural network if this were to be implemented. This optional feature would be one of the first to be implemented, as it shows more than just the output of the network to any user who visits the website.
 
     <h2>Project Schedule</h2>
     <!--Plan your work so that you can avoid a big rush right before the final project deadline. Delegate different modules and responsibilities among your team members. Write this in terms of weekly deadlines.-->
     <!-- Tyler -->
 
-    We'll be working in a shared GitHub repo with standard git branching workflows. We will communicate proactively and early about any incoming schedule conflicts and work around them
+    First, we'll be working in a shared GitHub repo with standard `git` workflows. The repository can be located at `https://github.com/tylerdinh/cse4507-final-project`. We will communicate proactively and early to one another over text and/or email about any incoming schedule conflicts and work around them. We plan to work on the assignment in person at minimum every Friday for around an hour, in class during the alloted times, and then offline for as much time as is needed.
+
+    <br><br>
+
+    Since the project is due December 7th, we can split this up into multiple broad week-by-week deadlines. Both members of our group are equally skilled in all categories, so we'll divide and triage specific tasks on a GitHub Projects hosted Kanban as we discuss what needs to be done for the given week. The week starting on Oct. 26, we'll define specifically what tasks are to be studied for each of the five senses, and then starting to parse the publicly available datasets as described above in Python to create a subgraph out of the full graph for one of these tasks. The week starting on Nov. 2, we'll finish a functional project prototype of one of these neural networks, by encoding the task into the input layer of neurons, determining the hidden layer(s), and determining the output layer of neurons, which will output a signal about the fly that can then be shown to the user. We will also work on our process book up to the current point to prepare for and work on the submission to the project's Milestone 1. Then, for the week starting on Nov. 9, we will start to and get the other four tasks' visualizations for the four remaining senses implemented, by reusing the same patterns as described for the first visualization. For the week starting on Nov. 16, we will work on our process book and continue to finish up any visualization that has not already been completed, and if possible try and get some of our optional features done as stretch goals. The most important optional feature would be to handle any user query as an encoded input to one of our networks' input layers, so we will try to implement this along with some of the needed interactive features in this proposal. We will ensure that our submission is good for Milestone 2 during this week as well. For the week starting on Nov. 23, we will clear up any issues after the in-class user study, implement possibly another optional feature, and prepare for and edit our presentations (both video and in-person). We will clean up any loose ends, including documentation of our code, process book, README.md, and then finally publish our work on GitHub Pages.
 
 </body>
 </html>

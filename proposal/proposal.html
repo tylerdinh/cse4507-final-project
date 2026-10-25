@@ -19,11 +19,11 @@
     <!--Discuss your motivations and reasons for choosing this project, especially any background or research interests that may have influenced your decision.-->
     <!-- Tyler -->
 
-    Recently, a complete map of the male fruit fly's brain and central nervous system was created by Google Research and released in September 2026. The release of the map made it the largest resource for understanding how a brain works. It also pairs nicely with the map of the female fruit fly's brain to understand differences between sexes. According to https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/, Google Research uses AI to "turn flat electron microscope images into 3D reconstructions", which has rapidly sped up the release and eventual 100% accuracy of the mapping. Then, AI sets the stage for other animals' brains to be more quickly analyzed like a fish, up until the point where a human's brain could possibly analyzed. If a human's brain is fully mapped and analyzed, it could solve a lot of long-standing research problems and likely revolutionize medicine along with a number of other fields.
+    Recently, a complete map of the male fruit fly's brain and central nervous system was created by Google Research and released in September 2026. The release of the map made it the largest resource for understanding how a brain works. It also pairs nicely with the map of the female fruit fly's brain to understand differences between sexes. According to `https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/`, Google Research uses AI to "turn flat electron microscope images into 3D reconstructions", which has rapidly sped up the release and eventual 100% accuracy of the mapping. Then, AI sets the stage for other animals' brains to be more quickly analyzed like a fish, up until the point where a human's brain could possibly analyzed. If a human's brain is fully mapped and analyzed, it could solve a lot of long-standing research problems and likely revolutionize medicine along with a number of other fields.
 
     <br><br>
 
-    With the release of the fruit fly data, many online users have been creating fun and interesting visualizations to observe the capabilities of a fly. For example, according to https://github.com/cobanov/awesome-fly (a list of fruit fly projects), a fly has been able to play video games such as Doom, Flappy Bird, Super Mario 64, and drive and play chess among other tasks. We saw these visualizations as inspiration for creating our own visualization that would hopefully work towards solving a problem in a real world, rather than just a game.
+    With the release of the fruit fly data, many online users have been creating fun and interesting visualizations to observe the capabilities of a fly. For example, according to `https://github.com/cobanov/awesome-fly` (a list of fruit fly projects), a fly has been able to play video games such as Doom, Flappy Bird, Super Mario 64, and drive and play chess among other tasks. We saw these visualizations as inspiration for creating our own visualization that would hopefully work towards solving a problem in a real world, rather than just a game.
 
     <h2>Project Objectives</h2>
     <!--Provide the primary questions you are trying to answer with your visualization. What would you like to learn and accomplish? List the benefits.-->
@@ -33,13 +33,25 @@
 
     <br><br>
     
-    We may also be able to understand senses of living creatures better from a medical sense by studying the input stimuli and the output activations. A fly's sense of sight could draw parallels to the sense of sight found in humans, and so studying similar inputs for both flies and humans could lead to innovations after we compare and contrast the outputs. For example, if we present a dangerous object to a fly, we can analyze how it may act, and observe which neurons and which groupings of neurons are activated. If we do the same with a human, then we may be able to hypothesize about certain neuron groups being activated and then further analyze them to see if there is any connection or not, which could help researchers with medical innovations.
+    We may also be able to understand senses of living creatures better from a medical sense by studying the input stimuli and the output activations. A fly's sense of sight could draw parallels to the sense of sight found in humans, and so studying similar inputs for both flies and humans could lead to innovations after we compare and contrast the outputs. For example, if we present a dangerous object to a fly, we can analyze how it may act, and observe which neurons and which groupings of neurons are activated. If we do the same with a human, then we may be able to hypothesize about certain neuron groups being activated and then further analyze them to see if there is any connection or not, which could help researchers with medical innovations related to sight. This may be able to generalize for each of the five main senses.
 
     <h2>Data</h2>
     <!--From where and how are you collecting your data? If appropriate, provide a link to your data sources.-->
     <!-- Tyler -->
 
-    We will be collecting our data from `https://male-cns.janelia.org/`. We will download three files that are relevant to our processing and visualization. `data/body-annotations-male-cns-v1.0-minconf-0.5.feather`, `data/body-neurotransmitters-male-cns-v1.0.feather`, and `data/connectome-weights-male-cns-v1.0-minconf-0.5.feather`
+    We will be collecting our data from `https://male-cns.janelia.org/`, which is the official website for the recently released mapping of the male fruit fly's brain. 
+    
+    <br><br>
+
+    The first file that is relevant to our processing and visualization is `data/body-annotations-male-cns-v1.0-minconf-0.5.feather`, which provides neuron annotations for each neuron in the male fruit fly's brain. This will be used to discover the neurons that are related to each other in terms of senses, and then prune the brain for these subsets of neurons due to the computational infeasibility of the entire brain running in a browser.
+
+    <br><br>
+
+    The second file that is relevant to our processing and visualization is `data/body-neurotransmitters-male-cns-v1.0.feather`, which describes the aggregate neurotransmitter predictions for each neuron. With this file, we can observe the actual output of each neuron related to a task for a sense and then relate them to a possible real world action of the fly.
+
+    <br><br>
+
+    The final file that is relevant to our processing and visualization is `data/connectome-weights-male-cns-v1.0-minconf-0.5.feather`, which defines the full connection graph with edges and weights (connection strengths) between nodes (neurons). We can use this data to set up the full neural networks for each of the five senses for the male fruit fly.
 
     <h2>Data Processing</h2>
     <!--Do you expect to do substantial data cleanup? What quantities do you plan to derive from your data? How will data processing be implemented?-->

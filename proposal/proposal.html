@@ -57,17 +57,11 @@
     <!--Do you expect to do substantial data cleanup? What quantities do you plan to derive from your data? How will data processing be implemented?-->
     <!-- Tyler -->
 
-    Yes, we expect to need substantial data cleanup for Fly Sense. Because displaying the entire neural network of the fly brain is infeasible in the browser through JavaScript, we will need to prune the neural network. We will do this speicifically by only targeting the nodes that are relevant to the selected sense for the fruit fly. For example, for the fruit fly's sense of "taste", we would only target input nodes relevant to tasting, hidden layer nodes relevant to tasting, and output layer nodes relevant to tasting in the neural network. 
+    Yes, we expect to need substantial data processing and cleanup for our project (Fly Sense). Because displaying the entire neural network of the fly brain is computationally infeasible in the browser, we will need to prune the neural network per sense. We will do this specifically by only targeting the nodes that are relevant to the selected sense for the fruit fly. For example, for the fruit fly's sense of "taste", we would only target input nodes relevant to tasting, hidden layer nodes relevant to tasting, and output layer nodes relevant to tasting in the neural network. As such, we will need to do this a minimum of five times, for the five senses, and possibly more, depending on the number of predictor variables we would like to encode a task as. The output of any of these neural networks will be neurotransmitter(s) used to predict if the fly will feel a certain way. For example, if a fly tastes a bitter banana, its neurotransmitter(s) would likely report that the fly would turn away or be disgusted. The output neurotransmitter(s) are different for each of the five senses, due to the five senses containing significantly different categories of input neurons.
 
     <br><br>
     
-    As such, this will require knowledge of what nodes to prune per each of the five senses we intend to study for a fruit fly. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript.
-
-    <br><br>
-
-    Then, to visualize this neural network, we will use JavaScript for handling our pruned dataset and then rendering & serving it in the browser.
-
-    <br><br>
+    This will require knowledge of what neurons to prune per each of the five senses we intend to study for a fruit fly. We will need to look at online documentation for the dataset for what neuron groups are related to what sense, and make sure to obtain all of those values. We will accomplish this during our research at the start of the project. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript. If possible, we will use the `pandas` library for our data preprocessing/cleaning, and provide JavaScript with each of our pruned neural networks for visualization.
 
     <h2>Visualization Design</h2>
     <!-- How will you display your data? Provide some general ideas that you have for the visualization design. 

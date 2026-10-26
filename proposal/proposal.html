@@ -13,7 +13,7 @@
     <!--The project title, your names, e-mail addresses, and IDs.-->
     <!-- Tyler -->
 
-    Our final project's name is Fly Sense. It will be created by Tyler Dinh (dinh.t@wustl.edu, 525483) and Tengis Kelley (k.tengis@wustl.edu, 528529). 
+    Our final project's name is Fly Sense. It will be created by Tyler Dinh (dinh.t@wustl.edu, 525483) and Tengis Kelley (k.tengis@wustl.edu, 528529).
 
     <h2>Background and Motivation</h2>
     <!--Discuss your motivations and reasons for choosing this project, especially any background or research interests that may have influenced your decision.-->
@@ -32,15 +32,15 @@
     Our primary question that we plan to answer with our visualizations is "How do the output neurons activate for a fruit fly related to one of the five senses when given input stimuli?" Then, we can use the output of the fly's neural network to understand how it may act in any given situation. With the information on how a fly will act, we can better solve the problem of pesky flies, and determine ways to stop them in our lives. For example, there may be a new trap type that homeowners could deploy, based on smell, and features such as sweetness and bitterness. If it is possible to vary these predictor variables, we may be able to determine the best trap type to lure flies and remove them from inside houses.
 
     <br><br>
-    
+
     We may also be able to understand senses of living creatures better from a medical sense by studying the input stimuli and the output activations. A fly's sense of sight could draw parallels to the sense of sight found in humans, and so studying similar inputs for both flies and humans could lead to innovations after we compare and contrast the outputs. For example, if we present a dangerous object to a fly, we can analyze how it may act, and observe which neurons and which groupings of neurons are activated. If we do the same with a human, then we may be able to hypothesize about certain neuron groups being activated and then further analyze them to see if there is any connection or not, which could help researchers with medical innovations related to sight. This may be able to generalize for each of the five main senses.
 
     <h2>Data</h2>
     <!--From where and how are you collecting your data? If appropriate, provide a link to your data sources.-->
     <!-- Tyler -->
 
-    We will be collecting our data from <a href="https://male-cns.janelia.org/">https://male-cns.janelia.org/</a>, which is the official website for the recently released mapping of the male fruit fly's brain. 
-    
+    We will be collecting our data from <a href="https://male-cns.janelia.org/">https://male-cns.janelia.org/</a>, which is the official website for the recently released mapping of the male fruit fly's brain.
+
     <br><br>
 
     The first file that is relevant to our processing and visualization is <code>data/body-annotations-male-cns-v1.0-minconf-0.5.feather</code>, which provides neuron annotations for each neuron in the male fruit fly's brain. This will be used to discover the neurons that are related to each other in terms of senses, and then prune the brain for these subsets of neurons due to the computational infeasibility of the entire brain running in a browser.
@@ -60,7 +60,7 @@
     Yes, we expect to need substantial data processing and cleanup for our project (Fly Sense). Because displaying the entire neural network of the fly brain is computationally infeasible in the browser, we will need to prune the neural network per sense. We will do this specifically by only targeting the nodes that are relevant to the selected sense for the fruit fly. For example, for the fruit fly's sense of "taste", we would only target input nodes relevant to tasting, hidden layer nodes relevant to tasting, and output layer nodes relevant to tasting in the neural network. As such, we will need to do this a minimum of five times, for the five senses, and possibly more, depending on the number of predictor variables we would like to encode a task as. The output of any of these neural networks will be neurotransmitter(s) used to predict if the fly will feel a certain way. For example, if a fly tastes a bitter banana, its neurotransmitter(s) would likely report that the fly would turn away or be disgusted. The output neurotransmitter(s) are different for each of the five senses, due to the five senses containing significantly different categories of input neurons.
 
     <br><br>
-    
+
     This will require knowledge of what neurons to prune per each of the five senses we intend to study for a fruit fly. We will need to look at online documentation for the dataset for what neuron groups are related to what sense, and make sure to obtain all of those values. We will accomplish this during our research at the start of the project. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript. If possible, we will use the <code>pandas</code> library for our data preprocessing/cleaning, and provide JavaScript with each of our pruned neural networks for visualization.
 
     <h2>Visualization Design</h2>
@@ -72,7 +72,7 @@
     As a ballpark number, your proposal should contain about 2-4 pages of text 
     plus 5-6 pages of sketches. 
     -->
-    <h3>Initial Idea brainstorm</h3>
+    <h3>Initial Ideas</h3>
     <img src="img/design_sketch_1.jpg" alt="initial idea brainstorm sketch">
     <ul>
         <li>Guiding question: how does a fly respond to input based on the five senses?</li>
@@ -86,7 +86,7 @@
         <li>Output: fly motor neurons, e.g. "move to banana". The output space is still unclear, and we are unsure how to turn it into meaningful outputs.</li>
     </ul>
 
-    <h3>Design Option 1</h3>
+    <h3>Alt. Design Option 1</h3>
     <img src="img/design_sketch_2.jpg" alt="design option 1">
     <ul>
         <li>Neuron information flow vs. time, shown as a Sankey diagram from the five sense inputs, through sensory neurons and motor neurons, to motor outputs/behavior responses.</li>
@@ -99,7 +99,7 @@
         <li>Concerns: hand-tagging images for the database is time-consuming for a diverse input set, so we may have to settle for a small input space. The fly brain's spatial structure is lost, and recurrent loops in neural pathways are not shown.</li>
     </ul>
 
-    <h3>Design Option 2</h3>
+    <h3>Alt. Design Option 2</h3>
     <img src="img/design_sketch_3.jpg" alt="design option 2">
     <ul>
         <li>Fly brain activity heat map shown over anatomical renderings of the fly's nervous system (a side view and a front view).</li>
@@ -112,7 +112,7 @@
         <li>Cons: we know of no out-of-the-box way to draw the fly brain's anatomy. The "geographic" information for each neuron would need to be mapped onto an anatomical chart that we design from scratch.</li>
     </ul>
 
-    <h3>Design Option 3</h3>
+    <h3>Alt. Design Option 3</h3>
     <img src="img/design_sketch_4.jpg" alt="design option 3">
     <ul>
         <li>Plot a relevant subset of the neural network in 3D as layers of nodes connected by edges, from the input layer to the output layer.</li>

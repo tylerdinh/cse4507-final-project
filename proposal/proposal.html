@@ -19,11 +19,11 @@
     <!--Discuss your motivations and reasons for choosing this project, especially any background or research interests that may have influenced your decision.-->
     <!-- Tyler -->
 
-    Recently, a complete map of the male fruit fly's brain and central nervous system was created by Google Research and released in September 2026. The release of the map made it the largest resource for understanding how a brain works. It also pairs nicely with the map of the female fruit fly's brain to understand differences between sexes. According to `https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/`, Google Research uses AI to "turn flat electron microscope images into 3D reconstructions", which has rapidly sped up the release and eventual 100% accuracy of the mapping. Then, AI sets the stage for other animals' brains to be more quickly analyzed like a fish, up until the point where a human's brain could possibly analyzed. If a human's brain is fully mapped and analyzed, it could solve a lot of long-standing research problems and likely revolutionize medicine along with a number of other fields.
+    Recently, a complete map of the male fruit fly's brain and central nervous system was created by Google Research and released in September 2026. The release of the map made it the largest resource for understanding how a brain works. It also pairs nicely with the map of the female fruit fly's brain to understand differences between sexes. According to <a href="https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/">https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/</a>, Google Research uses AI to "turn flat electron microscope images into 3D reconstructions", which has rapidly sped up the release and eventual 100% accuracy of the mapping. Then, AI sets the stage for other animals' brains to be analyzed more quickly, such as a fish's, up until the point where a human's brain could possibly be analyzed. If a human's brain is fully mapped and analyzed, it could solve a lot of long-standing research problems and likely revolutionize medicine along with a number of other fields.
 
     <br><br>
 
-    With the release of the fruit fly data, many online users have been creating fun and interesting visualizations to observe the capabilities of a fly. For example, according to `https://github.com/cobanov/awesome-fly` (a list of fruit fly projects), a fly has been able to play video games such as Doom, Flappy Bird, Super Mario 64, and drive and play chess among other tasks. We saw these visualizations as inspiration for creating our own visualization that would hopefully work towards solving a problem in a real world, rather than just a game. Our own visualization would work to solve problems that fruit flies pose to humans.
+    With the release of the fruit fly data, many online users have been creating fun and interesting visualizations to observe the capabilities of a fly. For example, according to <a href="https://github.com/cobanov/awesome-fly">https://github.com/cobanov/awesome-fly</a> (a list of fruit fly projects), a fly has been able to play video games such as Doom, Flappy Bird, Super Mario 64, and drive and play chess among other tasks. We saw these visualizations as inspiration for creating our own visualization that would hopefully work towards solving a problem in a real world, rather than just a game. Our own visualization would work to solve problems that fruit flies pose to humans.
 
     <h2>Project Objectives</h2>
     <!--Provide the primary questions you are trying to answer with your visualization. What would you like to learn and accomplish? List the benefits.-->
@@ -39,19 +39,19 @@
     <!--From where and how are you collecting your data? If appropriate, provide a link to your data sources.-->
     <!-- Tyler -->
 
-    We will be collecting our data from `https://male-cns.janelia.org/`, which is the official website for the recently released mapping of the male fruit fly's brain. 
+    We will be collecting our data from <a href="https://male-cns.janelia.org/">https://male-cns.janelia.org/</a>, which is the official website for the recently released mapping of the male fruit fly's brain. 
     
     <br><br>
 
-    The first file that is relevant to our processing and visualization is `data/body-annotations-male-cns-v1.0-minconf-0.5.feather`, which provides neuron annotations for each neuron in the male fruit fly's brain. This will be used to discover the neurons that are related to each other in terms of senses, and then prune the brain for these subsets of neurons due to the computational infeasibility of the entire brain running in a browser.
+    The first file that is relevant to our processing and visualization is <code>data/body-annotations-male-cns-v1.0-minconf-0.5.feather</code>, which provides neuron annotations for each neuron in the male fruit fly's brain. This will be used to discover the neurons that are related to each other in terms of senses, and then prune the brain for these subsets of neurons due to the computational infeasibility of the entire brain running in a browser.
 
     <br><br>
 
-    The second file that is relevant to our processing and visualization is `data/body-neurotransmitters-male-cns-v1.0.feather`, which describes the aggregate neurotransmitter predictions for each neuron. With this file, we can observe the actual output of each neuron related to a task for a sense and then relate them to a possible real world action of the fly.
+    The second file that is relevant to our processing and visualization is <code>data/body-neurotransmitters-male-cns-v1.0.feather</code>, which describes the aggregate neurotransmitter predictions for each neuron. With this file, we can observe the actual output of each neuron related to a task for a sense and then relate them to a possible real world action of the fly.
 
     <br><br>
 
-    The final file that is relevant to our processing and visualization is `data/connectome-weights-male-cns-v1.0-minconf-0.5.feather`, which defines the full connection graph with edges and weights (connection strengths) between nodes (neurons). We can use this data to set up the full neural networks for each of the five senses for the male fruit fly.
+    The final file that is relevant to our processing and visualization is <code>data/connectome-weights-male-cns-v1.0-minconf-0.5.feather</code>, which defines the full connection graph with edges and weights (connection strengths) between nodes (neurons). We can use this data to set up the full neural networks for each of the five senses for the male fruit fly.
 
     <h2>Data Processing</h2>
     <!--Do you expect to do substantial data cleanup? What quantities do you plan to derive from your data? How will data processing be implemented?-->
@@ -61,7 +61,7 @@
 
     <br><br>
     
-    This will require knowledge of what neurons to prune per each of the five senses we intend to study for a fruit fly. We will need to look at online documentation for the dataset for what neuron groups are related to what sense, and make sure to obtain all of those values. We will accomplish this during our research at the start of the project. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript. If possible, we will use the `pandas` library for our data preprocessing/cleaning, and provide JavaScript with each of our pruned neural networks for visualization.
+    This will require knowledge of what neurons to prune per each of the five senses we intend to study for a fruit fly. We will need to look at online documentation for the dataset for what neuron groups are related to what sense, and make sure to obtain all of those values. We will accomplish this during our research at the start of the project. Data processing will be implemented in Python, as it is a much more supported language for processing and analyzing data than JavaScript. If possible, we will use the <code>pandas</code> library for our data preprocessing/cleaning, and provide JavaScript with each of our pruned neural networks for visualization.
 
     <h2>Visualization Design</h2>
     <!-- How will you display your data? Provide some general ideas that you have for the visualization design. 
@@ -74,24 +74,73 @@
     -->
     <h3>Initial Idea brainstorm</h3>
     <img src="img/design_sketch_1.jpg" alt="initial idea brainstorm sketch">
+    <ul>
+        <li>Guiding question: how does a fly respond to input based on the five senses?</li>
+        <li>Each human sense is mapped to its fly equivalent: touch &rarr; somatosensation, taste &rarr; gustation, hearing &rarr; audition, sight &rarr; vision, smell &rarr; olfaction.</li>
+        <li>Input: the user types in a task (e.g. "image of a house"), and a CLIP model matches it to the most likely image in an annotated database. Each image stores a score for each sense, which becomes the input to the fly brain network (e.g. neuron firing frequency in Hz).</li>
+        <li>Alternative input: a select box with one task/object per sense, each with its own input image, so all five senses can be tested. The input still needs some way to be embedded into the network as a vector.</li>
+        <li>Visualization idea: a force-directed graph. Rejected as the main view because it is impractical to interpret with more than 139k nodes.</li>
+        <li>Visualization idea: a 2D/3D brain silhouette with colored regions as a heat map. It gives an intuitive understanding, but it requires neuron location information.</li>
+        <li>Visualization idea: a Sankey diagram of sensory input &rarr; sense neurons &rarr; motor neurons &rarr; behavior commands. It shows the input-to-output flow explicitly.</li>
+        <li>Visualization idea: a layered view of a subset of the fly brain network, zoomed in from a region of the full brain. Only a subset is shown because the original network is too large and mostly unnecessary for our focus on the five senses. Different neurons light up depending on the chosen input.</li>
+        <li>Output: fly motor neurons, e.g. "move to banana". The output space is still unclear, and we are unsure how to turn it into meaningful outputs.</li>
+    </ul>
 
     <h3>Design Option 1</h3>
     <img src="img/design_sketch_2.jpg" alt="design option 1">
+    <ul>
+        <li>Neuron information flow vs. time, shown as a Sankey diagram from the five sense inputs, through sensory neurons and motor neurons, to motor outputs/behavior responses.</li>
+        <li>Input: the user enters a task prompt in a text box. A CLIP model maps the text to probabilities over known images, and the best-matching image is returned from the database with its tagged values (x<sub>i</sub> &isin; [0, 1] for somatosensation, gustation, audition, vision, and olfaction). These values form the input vector to the network.</li>
+        <li>A radar chart shows the returned image's encoding, so the user can see how much each sense contributes to the input at a glance.</li>
+        <li>Encoding: band width encodes signal strength, and each sense gets its own color so its flow can be traced.</li>
+        <li>Interaction: hovering highlights a path, and clicking filters to it.</li>
+        <li>Interaction: a time slider animates the propagation of the signal, letting the user step through activity at each n<sup>th</sup> layer.</li>
+        <li>Pros: focuses directly on input &rarr; response action in a readable format.</li>
+        <li>Concerns: hand-tagging images for the database is time-consuming for a diverse input set, so we may have to settle for a small input space. The fly brain's spatial structure is lost, and recurrent loops in neural pathways are not shown.</li>
+    </ul>
 
     <h3>Design Option 2</h3>
     <img src="img/design_sketch_3.jpg" alt="design option 2">
+    <ul>
+        <li>Fly brain activity heat map shown over anatomical renderings of the fly's nervous system (a side view and a front view).</li>
+        <li>Input: a dropdown of preset inputs (e.g. fruit, fly swatter). A small input set is more feasible for hand-tagged data.</li>
+        <li>Encoding: color shows activity level (yellow = low, orange = medium, red = high), placed over the region where it occurs.</li>
+        <li>Labeled regions (optic lobes, central brain, and the body's remaining nervous system) help viewers orient themselves in the anatomy.</li>
+        <li>Output: the predicted action (e.g. "flies away") with a confidence level (e.g. 83%).</li>
+        <li>Optional: a fly body simulation that acts out the output action.</li>
+        <li>Pros: gives the most intuitive picture of how neurons fire in spatial patterns for different inputs.</li>
+        <li>Cons: we know of no out-of-the-box way to draw the fly brain's anatomy. The "geographic" information for each neuron would need to be mapped onto an anatomical chart that we design from scratch.</li>
+    </ul>
 
     <h3>Design Option 3</h3>
     <img src="img/design_sketch_4.jpg" alt="design option 3">
+    <ul>
+        <li>Plot a relevant subset of the neural network in 3D as layers of nodes connected by edges, from the input layer to the output layer.</li>
+        <li>Alternative: show neuron traffic as a force-directed graph to see whether patterns arise, e.g. common "hubs" shared across input modalities. On small graphs, simple, clear patterns emerge.</li>
+        <li>Pros: plotting the network this way is the most standard approach and is easy to read for people in the field.</li>
+        <li>Cons: encoding node size in network graphs is a design choice that can bias or misrepresent the data.</li>
+        <li>Problem: if the fly brain network is not filtered properly, too many nodes make the graph noisy. The dense center makes it impossible to read patterns at the node level.</li>
+    </ul>
 
     <h3>Final Design Sketch</h3>
     <img src="img/design_sketch_5.jpg" alt="final design sketch">
+    <ul>
+        <li>Approach: combine the strengths of each idea into one design.</li>
+        <li>The heat map (from Option 2) conveys the most intuitive information: which parts of the brain light up, when, and why.</li>
+        <li>Using the anatomical brain and the 3D network graph (from Option 3) together gives both spatial context and the standard view that researchers expect.</li>
+        <li>The Sankey diagram (from Option 1) is kept as a backup that can summarize information flow in place of the 3D network graph.</li>
+        <li>Architecture: the user's task prompt (text box) or a "select input" dropdown goes to the CLIP model. The image is then retrieved from the database with its tagged per-sense values (the input vector), and a radar chart shows that encoding.</li>
+        <li>The fly brain network is filtered to one sense (e.g. olfaction), with the chosen input (e.g. "Fly sees a fly swatter") and its image shown next to the input layer.</li>
+        <li>Active neurons are highlighted during the forward pass, so the user can follow which pathways the input triggers.</li>
+        <li>Output: motor instructions, fly emotions, and a readable action (e.g. "fly away to evade swatter"). How to interpret the output space is still an open question.</li>
+        <li>Activity heat maps for two scenarios can be compared side by side using a "Save Scenario" button.</li>
+    </ul>
 
     <h2>Must-Have Features</h2>
     <!--List the features without which you would consider your project to be a failure.-->
     <!-- Tyler -->
 
-    First, we must have five senses that we analyze in total, as our entire project is about senses of a fly. Specifically, we need visualizations of the male fly's brain for Sight, Hearing, Smell, Taste, and Touch, with at least one task/network per sense. The visualization of each task should be a neural network of the appropriate nodes and edges for the input, hidden, and output layers rendered in the library `three.js`, so that the visualizations can be visualized in 3D. As the user starts a task for a fly, they should see the edges activating between different nodes in real time and in 3D, and then be able to see what the predicted state / feelings of the fly are after the neural network has successfully completed a forward pass with the predictor variables. The user should also be able to interactively select tasks per sense, which would change the encoded input into the neural network, and as a result also change how the fly may feel about the situation. We should likely have a way to compare and contrast different tasks and their predicted outputs for what the male fruit fly would do in the real world.
+    First, we must have five senses that we analyze in total, as our entire project is about senses of a fly. Specifically, we need visualizations of the male fly's brain for Sight, Hearing, Smell, Taste, and Touch, with at least one task/network per sense. The visualization of each task should be a neural network of the appropriate nodes and edges for the input, hidden, and output layers rendered in the library <code>three.js</code>, so that the visualizations can be visualized in 3D. As the user starts a task for a fly, they should see the edges activating between different nodes in real time and in 3D, and then be able to see what the predicted state / feelings of the fly are after the neural network has successfully completed a forward pass with the predictor variables. The user should also be able to interactively select tasks per sense, which would change the encoded input into the neural network, and as a result also change how the fly may feel about the situation. We should likely have a way to compare and contrast different tasks and their predicted outputs for what the male fruit fly would do in the real world.
 
     <h2>Optional Features</h2>
     <!--List the features you consider nice to have but not critical.-->
@@ -101,16 +150,16 @@
 
     <br><br>
 
-    Another feature that would be nice to have is if the user could drag around the 3D plane where the neural network visualization is. This would let the user explore the neural network for each sense more. In addition, it would be nice to have a feature where the user can hover over nodes in the same plane to recieve a tooltip of what their characteristics are. For example, one neuron could be associated with the left eye, while another neuron could be associated with the right eye. There are many relationships that a user would be able to look at between the nodes in the neural network if this were to be implemented. This optional feature would be one of the first to be implemented, as it shows more than just the output of the network to any user who visits the website.
+    Another feature that would be nice to have is if the user could drag around the 3D plane where the neural network visualization is. This would let the user explore the neural network for each sense more. In addition, it would be nice to have a feature where the user can hover over nodes in the same plane to receive a tooltip of what their characteristics are. For example, one neuron could be associated with the left eye, while another neuron could be associated with the right eye. There are many relationships that a user would be able to look at between the nodes in the neural network if this were to be implemented. This optional feature would be one of the first to be implemented, as it shows more than just the output of the network to any user who visits the website.
 
     <h2>Project Schedule</h2>
     <!--Plan your work so that you can avoid a big rush right before the final project deadline. Delegate different modules and responsibilities among your team members. Write this in terms of weekly deadlines.-->
     <!-- Tyler -->
 
-    First, we'll be working in a shared GitHub repo with standard `git` workflows. The repository can be located at `https://github.com/tylerdinh/cse4507-final-project`. We will communicate proactively and early to one another over text and/or email about any incoming schedule conflicts and work around them. We plan to work on the assignment in person at minimum every Friday for around an hour, in class during the alloted times, and then offline for as much time as is needed.
+    First, we'll be working in a shared GitHub repo with standard <code>git</code> workflows. The repository can be located at <a href="https://github.com/tylerdinh/cse4507-final-project">https://github.com/tylerdinh/cse4507-final-project</a>. We will communicate proactively and early to one another over text and/or email about any incoming schedule conflicts and work around them. We plan to work on the assignment in person at minimum every Friday for around an hour, in class during the allotted times, and then offline for as much time as is needed.
 
     <br><br>
 
-    Since the project is due December 7th, we can split this up into multiple broad week-by-week deadlines. Both members of our group are equally skilled in all categories, so we'll divide and triage specific tasks on a GitHub Projects hosted Kanban as we discuss what needs to be done for the given week. The week starting on Oct. 26, we'll define specifically what tasks are to be studied for each of the five senses, and then starting to parse the publicly available datasets as described above in Python to create a subgraph out of the full graph for one of these tasks. The week starting on Nov. 2, we'll finish a functional project prototype of one of these neural networks, by encoding the task into the input layer of neurons, determining the hidden layer(s), and determining the output layer of neurons, which will output a signal about the fly that can then be shown to the user. We will also work on our process book up to the current point to prepare for and work on the submission to the project's Milestone 1. Then, for the week starting on Nov. 9, we will start to and get the other four tasks' visualizations for the four remaining senses implemented, by reusing the same patterns as described for the first visualization. For the week starting on Nov. 16, we will work on our process book and continue to finish up any visualization that has not already been completed, and if possible try and get some of our optional features done as stretch goals. The most important optional feature would be to handle any user query as an encoded input to one of our networks' input layers, so we will try to implement this along with some of the needed interactive features in this proposal. We will ensure that our submission is good for Milestone 2 during this week as well. For the week starting on Nov. 23, we will clear up any issues after the in-class user study, implement possibly another optional feature, and prepare for and edit our presentations (both video and in-person). We will clean up any loose ends, including documentation of our code, process book, README.md, and then finally publish our work on GitHub Pages.
+    Since the project is due December 7th, we can split this up into multiple broad week-by-week deadlines. Both members of our group are equally skilled in all categories, so we'll divide and triage specific tasks on a GitHub Projects hosted Kanban as we discuss what needs to be done for the given week. The week starting on Oct. 26, we'll define specifically what tasks are to be studied for each of the five senses, and then start to parse the publicly available datasets as described above in Python to create a subgraph out of the full graph for one of these tasks. The week starting on Nov. 2, we'll finish a functional project prototype of one of these neural networks, by encoding the task into the input layer of neurons, determining the hidden layer(s), and determining the output layer of neurons, which will output a signal about the fly that can then be shown to the user. We will also work on our process book up to the current point to prepare for and work on the submission to the project's Milestone 1. Then, for the week starting on Nov. 9, we will start implementing the visualizations for the four remaining senses, by reusing the same patterns as described for the first visualization. For the week starting on Nov. 16, we will work on our process book and continue to finish up any visualization that has not already been completed, and if possible try and get some of our optional features done as stretch goals. The most important optional feature would be to handle any user query as an encoded input to one of our networks' input layers, so we will try to implement this along with some of the needed interactive features in this proposal. We will ensure that our submission is good for Milestone 2 during this week as well. For the week starting on Nov. 23, we will clear up any issues after the in-class user study, implement possibly another optional feature, and prepare for and edit our presentations (both video and in-person). We will clean up any loose ends, including documentation of our code, process book, README.md, and then finally publish our work on GitHub Pages.
 </body>
 </html>
